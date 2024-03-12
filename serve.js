@@ -15,8 +15,6 @@ app.get('/', (req, res) => {
 
 app.set('trust proxy', true);
 
-app.use(require('./lib/routes/config'));
-
 
 app.use(auth({
     issuerBaseURL: 'https://idp-integ.federate.amazon.com',
