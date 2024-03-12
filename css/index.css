@@ -463,3 +463,27 @@ pre > code {
 .data-list-empty.hidden {
     display: none;
 }
+
+.failure-body {
+    width: 100%;
+    overflow-y: auto;
+    margin: 0;
+    line-height: 1.35;
+    padding: .75rem 1rem;
+}
+
+.failure-message {
+    white-space: pre-wrap;
+    color: var(--color-red);
+}
+
+.failure-side {
+    width: 26rem;
+    flex: 0 0 auto !important;
+}
+
+.failure-side .scroll-y {
+    padding: .75rem;
+    display: flex;
+    flex-flow: column;
+}
