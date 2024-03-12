@@ -17,11 +17,13 @@
             <div class="gap-bottom-m"><h6 class="inline-block">Build Reference:</h6> <span><%= ref %></span></div>
             <h6>Error:</h6>
             <div class="norm failure-message gap-bottom-xl"><%= error %></div>
+            <% if (origin !== 'dashboards') { %>
             <div>
                 <video controls width="100%">
                     <source src="https://d3udsodshx7v8u.cloudfront.net/<%= video %>" type="video/mp4" />
                 </video>
             </div>
+            <% } %>
         </div>
     </div>
     <div class="box failure-side box-scroll-fade">
