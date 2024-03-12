@@ -8,13 +8,14 @@ const midwayConfig = config.get('midway');
 const port = 8080;
 const baseURL = process.isDevelopment ? `http://0.0.0.0:${port}` : midwayConfig.baseURL;
 
-
 app.get('/', (req, res) => {
+    if (req.get('User-Agent')?.includes?.('ELB-HealthChecker'))
+        return res.sendStatus(200);
+
     res.redirect('/projects');
 });
 
 app.set('trust proxy', true);
-
 
 app.use(auth({
     issuerBaseURL: 'https://idp-integ.federate.amazon.com',
