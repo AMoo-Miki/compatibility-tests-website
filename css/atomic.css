@@ -1,0 +1,75 @@
+.center {
+    text-align: center;
+}
+
+.color-red {
+    color: var(--color-red);
+}
+
+.color-orange {
+    color: var(--color-orange);
+}
+
+.color-green {
+    color: var(--color-green);
+}
+
+.grid-1-col {
+    grid-template-columns: auto;
+}
+
+.grid-2-col {
+    grid-template-columns: auto max-content;
+}
+
+.grid-3-col {
+    grid-template-columns: auto repeat(2, max-content);
+}
+
+.grid-4-col {
+    grid-template-columns: auto repeat(3, max-content);
+}
+
+.grid-5-col {
+    grid-template-columns: auto repeat(4, max-content);
+}
+
+.grid-6-col {
+    grid-template-columns: auto repeat(5, max-content);
+}
+
+.grid-1-col .full-span {
+    grid-column: 1 / span 1;
+}
+
+.grid-2-col .full-span {
+    grid-column: 1 / span 2;
+}
+
+.grid-3-col .full-span {
+    grid-column: 1 / span 3;
+}
+
+.grid-4-col .full-span {
+    grid-column: 1 / span 4;
+}
+
+.grid-5-col .full-span {
+    grid-column: 1 / span 5;
+}
+
+.grid-6-col .full-span {
+    grid-column: 1 / span 6;
+}
+
+.w10 {
+    min-width: 10rem;
+}
+
+.scroll-y {
+    overflow-y: auto;
+}
+
+.inline-block {
+    display: inline-block;
+}

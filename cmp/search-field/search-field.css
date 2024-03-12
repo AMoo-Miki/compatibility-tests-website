@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'boxicons';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('/font/boxicons/boxicons.woff2') format('woff2');
+}
+
+:host {
+    display: block;
+    max-width: 400px;
+}
+
+form {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="search"] {
+    color: var(--color-primary);
+    border: 1px solid var(--color-border-secondary);
+    padding: .5rem 2rem;
+    line-height: 1rem;
+    background: transparent;
+    border-radius: .25rem;
+}
+
+input[type="search"]:focus {
+    border-color: var(--color-border-active);
+    box-shadow: var(--shadow-highlight);
+    outline: 0;
+}
+
+form::before {
+    content: "\\ebf7";
+    color: var(--color-secondary);
+    font-family: 'boxicons';
+    font-size: 1.5rem;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+
+    position: absolute;
+    top: calc(50% + 1px);
+    left: .25rem;
+    transform: translateY(-50%);
+}
+
+input[type="reset"] {
+    font-family: 'boxicons';
+    border: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-rendering: auto;
+    display: none;
+    color: var(--color-secondary);
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: .25rem;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+}
+
+input[type="search"]:valid ~ input[type="reset"] {
+    display: inline-block;
+}

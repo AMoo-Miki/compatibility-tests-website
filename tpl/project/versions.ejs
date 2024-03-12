@@ -1,0 +1,48 @@
+<div class="box-head">
+    <h2 class="breadcrumb">
+        <div><a href="/projects">Projects</a></div>
+        <div><a href="/project/<%= key %>"><%= project %></a></div>
+        <div><%= src %></div>
+    </h2>
+    <search-field></search-field>
+</div>
+<div class="box box-scroll-fade-bottom">
+    <div class="list grid-5-col">
+        <div class="list-head">
+            <div>OpenSearch</div>
+            <div class="center">Security</div>
+            <div class="center">Version</div>
+            <div class="center">Date</div>
+            <div class="center">Stats</div>
+        </div>
+        <div class="list-body" data-search-list>
+            <% for (const { version, security, stats } of versions) { %>
+                <div class="list-row" data-search-key="<%=
+                    (version + ' ' + (security ? 'enabled' : 'disabled') + ' ' + stats.version).replace(/[^a-z\d ._\/-]+/ig, ' ').toLowerCase()
+                %>">
+                    <div>
+                        <% if (stats?.sum) { %>
+                            <a href="/failures/<%= key %>/-/<%= src %>/-/<%= version %>/<%= security ? 1 : 0 %>"><%= version %></a>
+                        <% } else { %>
+                            <%= version %>
+                        <% } %>
+                    </div>
+                    <div class="center"><%= security ? 'Enabled' : 'Disabled' %></div>
+                    <div class="center"><%= stats.packageVersion %></div>
+                    <div class="center"><%= stats.timestamp %></div>
+                    <div class="center">
+                        <% if (stats?.sum) { %>
+                            <a href="/failures/<%= key %>/-/<%= src %>/-/<%= version %>/<%= security ? 1 : 0 %>">
+                                <span class="color-<%= stats.passed === stats.sum ? 'green' : 'red' %>"><%= stats.passed %></span>
+                                <span>/ <%= stats.sum %></span>
+                            </a>
+                        <% } else { %>
+                            <span class="color-red">None</span>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+                <%- include('search/no-results') %>
+        </div>
+    </div>
+</div>

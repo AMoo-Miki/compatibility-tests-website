@@ -1,0 +1,41 @@
+<div class="box-head">
+    <h2 class="breadcrumb">
+        <div><small>Failures</small></div>
+        <div><a href="/project/<%= key %>"><%= project %></a></div>
+        <div><a href="/project/<%= key %>/-/<%= src %>"><%= src %></a></div>
+        <div>OpenSearch <%= version %> <%= (security ? 'with' : 'without') %> Security</div>
+    </h2>
+
+    <search-field></search-field>
+</div>
+<div class="box box-scroll-fade-bottom">
+    <div class="list grid-3-col">
+        <div class="list-head">
+            <div>Title</div>
+            <div class="center">Version</div>
+            <div class="center">Stats</div>
+        </div>
+        <div class="list-body" data-search-list>
+            <% const statePills = { failed: 'faint-red', skipped: 'faint-orange', passed: 'faint-green' } %>
+            <% for (const { id, title, src, state, spec, platform, timestamp, packageVersion, duration } of failures) { %>
+                <div class="list-row" data-search-key="<%=
+                    (title + ' ' + src + ' ' + state + ' ' + spec + ' ' + platform + ' ' + packageVersion).replace(/[^a-z\d ._-]+/ig, ' ').toLowerCase()
+                %>">
+                    <div>
+                        <a href="/failure/<%= id %>" draggable="false"><%= title %></a><br />
+                        <small><%= src %><i class="sep"></i><%= spec %></small>
+                    </div>
+                    <div class="center">
+                        <span><%= packageVersion %></span><br />
+                        <small><%= platform %></small>
+                    </div>
+                    <div class="center">
+                        <span class="pill pill-<%= statePills[state] || state %>"><%= state.toUpperCase() %></span><br>
+                        <small><%= timestamp %></small>
+                    </div>
+                </div>
+            <% } %>
+            <%- include('search/no-results') %>
+        </div>
+    </div>
+</div>

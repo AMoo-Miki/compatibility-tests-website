@@ -1,0 +1,92 @@
+[
+  {
+    "name": "OpenSearch Dashboards",
+    "key": "dashboards",
+    "slug": "dashboards",
+    "src": "git://opensearch-project/OpenSearch-Dashboards/2.x"
+  },
+  {
+    "name": "Alerting: Dashboards Plugin",
+    "key": "dashboards/plugins/alerting",
+    "slug": "alerting",
+    "src": "git://opensearch-project/alerting-dashboards-plugin/2.x"
+  },
+  {
+    "name": "Anomaly Detection: Dashboards Plugin",
+    "key": "dashboards/plugins/anomaly-detection",
+    "slug": "anomaly-detection",
+    "src": "git://opensearch-project/anomaly-detection-dashboards-plugin/2.x"
+  },
+  {
+    "name": "Assistant: Dashboards Plugin",
+    "key": "dashboards/plugins/assistant",
+    "slug": "assistant",
+    "src": "git://opensearch-project/dashboards-assistant/2.x"
+  },
+  {
+    "name": "Index Management: Dashboards Plugin",
+    "key": "dashboards/plugins/index-management",
+    "slug": "index-management",
+    "src": "git://opensearch-project/index-management-dashboards-plugin/2.x"
+  },
+  {
+    "name": "Maps: Dashboards Plugin",
+    "key": "dashboards/plugins/maps",
+    "slug": "maps",
+    "src": "git://opensearch-project/dashboards-maps/2.x"
+  },
+  {
+    "name": "ML Commons: Dashboards Plugin",
+    "key": "dashboards/plugins/ml-commons",
+    "slug": "ml-commons",
+    "src": "git://opensearch-project/ml-commons-dashboards/2.x"
+  },
+  {
+    "name": "Notifications: Dashboards Plugin",
+    "key": "dashboards/plugins/notifications",
+    "slug": "notifications",
+    "src": "git://opensearch-project/dashboards-notifications/2.x"
+  },
+  {
+    "name": "Observability: Dashboards Plugin",
+    "key": "dashboards/plugins/observability",
+    "slug": "observability",
+    "src": "git://opensearch-project/dashboards-observability/2.x"
+  },
+  {
+    "name": "Query Workbench: Dashboards Plugin",
+    "key": "dashboards/plugins/query-workbench",
+    "slug": "query-workbench",
+    "src": "git://opensearch-project/dashboards-query-workbench/2.x"
+  },
+  {
+    "name": "Reports: Dashboards Plugin",
+    "key": "dashboards/plugins/reporting",
+    "slug": "reporting",
+    "src": "git://opensearch-project/dashboards-reporting/2.x"
+  },
+  {
+    "name": "Search Relevance: Dashboards Plugin",
+    "key": "dashboards/plugins/search-relevance",
+    "slug": "search-relevance",
+    "src": "git://opensearch-project/dashboards-search-relevance/2.x"
+  },
+  {
+    "name": "Security Analytics: Dashboards Plugin",
+    "key": "dashboards/plugins/security-analytics",
+    "slug": "security-analytics",
+    "src": "git://opensearch-project/security-analytics-dashboards-plugin/2.x"
+  },
+  {
+    "name": "Security: Dashboards Plugin",
+    "key": "dashboards/plugins/security",
+    "slug": "security",
+    "src": "git://opensearch-project/security-dashboards-plugin/2.x"
+  },
+  {
+    "name": "Visualizations: Dashboards Plugin",
+    "key": "dashboards/plugins/gantt-chart",
+    "slug": "gantt-chart",
+    "src": "git://opensearch-project/dashboards-visualizations/2.x"
+  }
+]

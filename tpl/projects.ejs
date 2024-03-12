@@ -1,0 +1,46 @@
+<div class="box-head">
+    <h2 class="breadcrumb">Projects</h2>
+    <search-field></search-field>
+</div>
+<div class="box box-scroll-fade-bottom">
+    <div class="list grid-3-col">
+        <div class="list-head">
+            <div>Name</div>
+            <div class="center">Sources</div>
+            <div class="center">Stats</div>
+        </div>
+        <div class="list-body" data-search-list>
+            <% for (const { name, key, stats, src, srcCount } of projects) { %>
+                <div class="list-row" data-search-key="<%=
+                    (name).replace(/[^a-z\d ._-]+/ig, ' ').toLowerCase()
+                %>">
+                    <div>
+                        <% if (srcCount) { %>
+                            <a href="/project/<%= key %>" draggable="false"><%= name %></a>
+                        <% } else { %>
+                            <%= name %>
+                        <% } %>
+                    </div>
+                    <div class="center">
+                        <% if (srcCount) { %>
+                            <a href="/project/<%= key %>" draggable="false"><%= srcCount %></a>
+                        <% } else { %>
+                            <span>-</span>
+                        <% } %>
+                    </div>
+                    <div class="center">
+                        <% if (stats?.sum) { %>
+                            <a href="/project/<%= key %>/-/<%= src %>">
+                                <span class="color-<%= stats.passed === stats.sum ? 'green' : 'red' %>"><%= stats.passed %></span>
+                                <span>/ <%= stats.sum %></span>
+                            </a>
+                        <% } else { %>
+                            <span class="color-red">None</span>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+            <%- include('search/no-results') %>
+        </div>
+    </div>
+</div>
