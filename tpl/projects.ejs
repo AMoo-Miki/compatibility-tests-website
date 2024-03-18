@@ -31,7 +31,7 @@
                     <div class="center">
                         <% if (stats?.sum) { %>
                             <a href="/project/<%= key %>/-/<%= src %>">
-                                <span class="color-<%= stats.passed === stats.sum ? 'green' : 'red' %>"><%= stats.passed %></span>
+                                <span class="color-<%= stats.passed === stats.sum ? 'green' : 'red' %>"><%= stats.sum - stats.passed %></span>
                                 <span>/ <%= stats.sum %></span>
                             </a>
                         <% } else { %>
