@@ -7,6 +7,13 @@
     "src": "git://opensearch-project/OpenSearch-Dashboards/2.x"
   },
   {
+    "name": "OpenSearch Dashboards: No Plugins",
+    "short": "Dashboards Pure",
+    "key": "dashboards-no-plugins",
+    "slug": "dashboards",
+    "src": "git://opensearch-project/OpenSearch-Dashboards/2.x"
+  },
+  {
     "name": "Alerting: Dashboards Plugin",
     "short": "Alerting",
     "key": "dashboards/plugins/alerting",
